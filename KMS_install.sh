@@ -87,13 +87,13 @@ install git
 print "Installing Ansible"
 install ansible 
 
-# Clone KMS_install Repo
+# Clone KMS_ansible Repo
 print "Clone KMS_install Repo"
-if [ ! -d /tmp/KMS_install ] || [false]
+if [ ! -d /tmp/KMS_ansible ]
 then
-  git clone --branch docker --depth 1 https://github.com/amyounis/KMS_install.git /tmp/KMS_install && cd /tmp/KMS_install && echo -e "${GREEN}OK${NC}"
+  git clone --branch docker --depth 1 https://github.com/amyounis/KMS_ansible.git /tmp/KMS_ansible && cd /tmp/KMS_ansible && echo -e "${GREEN}OK${NC}"
 else
-  cd /tmp/KMS_install && echo -e "${GREEN}OK${NC}"
+  cd /tmp/KMS_ansible && echo -e "${GREEN}OK${NC}"
 fi
 
 # Play Ansible Playbook
